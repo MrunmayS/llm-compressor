@@ -133,6 +133,7 @@ class State:
         start: float = None,
         steps_per_epoch: int = None,
         batches_per_step: int = None,
+        processor: Any = None,
         **kwargs,
     ) -> dict:
         """
@@ -200,6 +201,8 @@ class State:
             self.data.test = test_data if not copy_data else deepcopy(test_data)
         if calib_data is not None:
             self.data.calib = calib_data if not copy_data else deepcopy(calib_data)
+        if processor is not None:
+            self.processor = processor
 
         if "device" in kwargs:
             self.hardware.device = kwargs["device"]
