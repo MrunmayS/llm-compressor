@@ -265,6 +265,7 @@ class AutoRoundModifier(Modifier, QuantizationMixin):
         ignore_layers = self.get_unquantized_layer_names(decoding_layer)
         kwargs = {
             "tokenizer": "",  # A placeholder
+            "processor": state.processor,
             "scheme": ar_quant_scheme,
             "iters": self.iters,
             "lr": self.lr,
