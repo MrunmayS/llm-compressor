@@ -265,6 +265,7 @@ AWQ_MAPPING_REGISTRY: dict[str, list[AWQMapping]] = {
     "Qwen2MoeForCausalLM": _moe_default_mappings,
     "Qwen3ForCausalLM": _default_mappings,
     "Qwen3MoeForCausalLM": _moe_default_mappings,
+    "Qwen3_5ForCausalLM": _default_mappings,
     "Qwen3NextForCausalLM": _qwen3_next_moe_mappings,
     "SeedOssForCausalLM": _default_mappings,
     "Ernie4_5_MoeForCausalLM": _default_mappings,
